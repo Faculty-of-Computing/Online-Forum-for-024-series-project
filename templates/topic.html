@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ topic[0] }}</h2>
+<p>{{ topic[1] }}</p>
+<p>By: {{ topic[2] }}</p>
+
+<h3>Replies</h3>
+<ul>
+    {% for r in replies %}
+        <li>{{ r[0] }} - <b>{{ r[1] }}</b></li>
+    {% endfor %}
+</ul>
+
+{% if session.get("username") %}
+<form method="post">
+    <textarea name="reply"></textarea><br>
+    <button type="submit">Reply</button>
+</form>
+{% endif %}
+{% endblock %}

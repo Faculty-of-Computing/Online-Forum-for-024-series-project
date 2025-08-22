@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Create Topic</h2>
+<form method="post">
+    Title: <input type="text" name="title"><br>
+    Content: <textarea name="content"></textarea><br>
+    <button type="submit">Post</button>
+</form>
+{% endblock %}

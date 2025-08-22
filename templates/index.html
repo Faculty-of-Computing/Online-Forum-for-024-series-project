@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Topics</h2>
+<ul>
+    {% for t in topics %}
+        <li><a href="{{ url_for('topic', topic_id=t[0]) }}">{{ t[1] }}</a> by {{ t[3] }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
